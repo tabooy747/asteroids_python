@@ -25,6 +25,10 @@ def main():
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     asteroidfield = AsteroidField()
 
+    print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
+    print(f"Screen width: {SCREEN_WIDTH}")
+    print(f"Screen height: {SCREEN_HEIGHT}")
+
     while True:
         log_state()
         for event in pygame.event.get():
@@ -47,12 +51,6 @@ def main():
             obj.draw(screen)
         pygame.display.flip()
         dt = clock.tick(60) / 1000
-        print(dt)
-
-
-    print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
-    print(f"Screen width: {constants.SCREEN_WIDTH}")
-    print(f"Screen height: {constants.SCREEN_HEIGHT}")
 
 
 if __name__ == "__main__":
